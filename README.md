@@ -138,12 +138,14 @@ Some of the most used aria tags are:
 
 Applying this attribute to an element effectively removes it and all of its descendants from the accessibility tree.
 
-<span class="close" aria-hidden="true">X</span>
+	<span class="close" aria-hidden="true">X</span>
 
 ## Aria-label
 
 Assigns a string that labels an element, use it when <label> is not defined or when it is not visible.  
-example: <input type="text" name="label" aria-label="Last name">
+example: 
+
+	<input type="text" name="label" aria-label="Last name">
 
 Placeholder attributes are not a replace for input labels.
 
@@ -151,25 +153,23 @@ Placeholder attributes are not a replace for input labels.
 
 Identifies the element that labels the current element if there is not a label available, example:
 
-<h2 id="labellastname">Last name</h2> <input type="text" name="label" aria-labelledby="labellastname">
+	<h2 id="labellastname">Last name</h2> <input type="text" name="label" aria-labelledby="labellastname">
 
 ## Aria-checked
 
 Indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
-<span class="custombox" aria-checked="true"></span><input type="checkbox" name="terms" class="hidden">
+	<span class="custombox" aria-checked="true"></span><input type="checkbox" name="terms" class="hidden">
 
 ## Aria-hidden
-
-  
 
 Note: anything that has a CSS style of visibility: hidden or display: none or uses the HTML5 hidden attribute will be hidden from assistive technology users.
 
 ## Role button
 
-We recommend using <button> for any interactive controls but in case you want to use other tag for this you will need to add the role necessary and tabindex , example:
+We recommend using `<button>` for any interactive controls but in case you want to use other tag for this you will need to add the role necessary and tabindex , example:
 
-<span role="button" tabindex="0">Save</span>
+	<span role="button" tabindex="0">Save</span>
 
 # TESTING TOOLS
 
@@ -177,8 +177,7 @@ We recommend using <button> for any interactive controls but in case you want to
 
 Wave is a free tool from WebAIM that will help you check your site for accessibility problems, this tool generates a variety of reports based on the results of an analyzed web page directly on original web page with embedded icons and indicators that reveal the accessibility of that page.
 
-  
-
+ 
 There are 2 ways to use this tool:
 
 -   Use the online version [http://wave.webaim.org/](http://wave.webaim.org/)
@@ -186,17 +185,13 @@ There are 2 ways to use this tool:
 -   Install the chrome or firefox extension (recomended) [Extension download](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
     
 
-  
-
+ 
 ## Chrome accessibility inspector
 
-This tool allow visualisation of the "[accessibility tree](http://www.w3.org/WAI/PF/aria-implementation/#intro_treetypes)" view of a web page. Chrome canary adds this new “accessibility” tab to the element section of developer tools.
+This tool allow visualisation of the [accessibility tree](http://www.w3.org/WAI/PF/aria-implementation/#intro_treetypes) view of a web page. Chrome canary adds this new *accessibility* tab to the element section of developer tools.
 
-  
 
 ## Axe
-
-  
 
 AXe is an automated accessibility open source testing library and a chrome extension. Test results include a list of accessibility issues, severity, descriptions, and snippets of the code that caused the issue.
 
@@ -217,16 +212,11 @@ This screen reader uses a relatively simple navigation method based on the explo
 
 This is a screen reader integrated on OSX and IOS systems, you can enable this is system preferences > accessibility or you can press Command-F5 to enable VoiceOver.
 
-  
-  
-  
-  
-
 # FAQ
 
 ## Is mobile also important in accessibility?
 
-Yes, a [study of 1782 screen reader users](https://webaim.org/projects/screenreadersurvey7/#mobile) last year showed that 88% used screen readers on their mobile devices.
+Yes, a  recent [study of 1782 screen reader users](https://webaim.org/projects/screenreadersurvey7/#mobile) in 2017 showed that 88% used screen readers on their mobile devices.
 
 ## Audit tools are enough for test accessibility?
 
