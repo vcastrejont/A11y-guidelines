@@ -1,14 +1,18 @@
+# Accessibility guidelines
+A practical guide to an accessible web
+This guide is meant to provide team specific information to help you understand the web accessibility standards.
 
-# DOCUMENT
 
-## Language
+## DOCUMENT
+
+### Language
 Declaring a language attribute on the HTML element enables a screen reader to read out the text with correct pronunciation.
 
 Specify a language with the lang attribute on the html element, example: `<html lang="en">`
 
 **How to test:** Manually test or using wave testing tool.
 
-# LANDMARKS
+## LANDMARKS
 
 Landmarks have a very important role in semantics, html has a wide variety of tags that are specific for every part of a website, we recommend to use them correctly for each case.
 
@@ -18,13 +22,13 @@ Roles are part of the html 5 standard now they help screen reader users to ident
 
 These are the most common landmarks tags currently available:
 
-## Main
+### Main
 
 The `<main>` tag specifies the main content of a document. This will help screen readers and other assistive technologies understand where the main content begins. Use only once per document.
 
 **How to test:** Manually test or use a testing tool
 
-## Banner
+### Banner
 
 Banners are a convention used on most web sites to convey branding such as the logo, identity and may also be used as a location for advertising information or include the search form, they are placed typically at the top of the website. You can only have one `role=”banner”` per document, example:
 
@@ -32,17 +36,17 @@ Banners are a convention used on most web sites to convey branding such as the l
 	
 **How to test:** Manually test or use a testing tool
 
-# Header
+## Header
 
 The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids. You can have several `<header>` elements in one document if they don't have the role banner assigned.
 
-## Nav
+### Nav
 
 The `<nav>` tag represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents.
 
 Notice that not all links of a document should be inside a `<nav>` element. This element is intended only for major block of navigation links. A document may have several `<nav> `elements.
 
-## Footer
+### Footer
 
 Contains information about the document A footer typically contains information about the author of the section, copyright data or links to related documents.
 
@@ -50,13 +54,13 @@ Use `<footer role="contentinfo">` for better compatibility.
 
 **How to test:** Manually test or a testing tool.
 
-## Aside
+### Aside
 
 Asides are frequently presented as sidebars or call-out boxes. They represents a portion of a document whose content is only indirectly related to the document's main content.   They common use of this is for sidebar.
 
 **How to test:** Manually test or a testing tool.
 
-## Page main search
+### Page main search
 
 A search landmark contains a collection of items and objects that, as a whole, combine to create search functionality to content on the website
 
@@ -64,28 +68,28 @@ Use `<form role="search">` on any search form in the website.
 
 **How to test:** Manually test
 
-# LINKS
-## Underline and Hover
+## LINKS
+### Underline and Hover
 
 Users with color blindness or low vision may have trouble distinguishing links from regular text when the underline is missing.
 
 If is possible ensure links are recognizable when the user hover the element by adding underlined style.  
 **How to test:** Manually test
 
-## Outline
+### Outline
 
 By default browsers have an outline style for focused elements, this important for users that have vision problems or use keyboard to navigate. In case the browser outline is removed should be replaced with another  
 **How to test:** Manually test
 
 Learn more about why outline is so important: [http://outlinenone.com](http://outlinenone.com)
 
-# HEADINGS
+## HEADINGS
 
 The headings should be consistent and keep a logical hierarchy level from h1 to h6, a good practice is to have h1 for the most important heading and going down to h6 without skipping any level.
 
 **How to test:** Use wave testing tool
 
-# COLORS
+## COLORS
 
 Make sure content is readable and the foreground contrasts sufficiently with the background. Color should not be used as the only means of conveying information, because blind users are not able to see colors, and colorblind or older users may not see colors correctly.
 
@@ -93,7 +97,7 @@ The [WCAG 2.0](http://www.w3.org/TR/WCAG20/) color contrast Level AA success cri
   
 **How to test:** Use wave testing tool
 
-# IMAGES
+## IMAGES
 
 Images should have an alt property to describe the content of image, example:
 
@@ -109,7 +113,7 @@ Note: if the image is the company logo the alt property should be the company na
   
 **How to test:** Manually check that the text descriptions provided by ALT attribute is clear and descriptive or use wave testing tool
 
-# KEYBOARD
+## KEYBOARD
 
 Many users with disabilities use the keyboard as main way to interact with a website, we must ensure these user can operate the main features of our website.
 
@@ -123,7 +127,7 @@ Many users with disabilities use the keyboard as main way to interact with a web
     
 **How to test:** Check manually by tabbing through the page and checking all interactive elements for keyboard accessibility.
 
-# ARIA
+## ARIA
 
 The easiest way to get an accessible control is to use a standard HTML control, they are keyboard accessible, scale easily, and are generally understood by screen readers.
 
@@ -134,13 +138,13 @@ The ARIA specification is split up into three different types of attributes: rol
 
 Some of the most used aria tags are:
 
-## Aria-hidden
+### Aria-hidden
 
 Applying this attribute to an element effectively removes it and all of its descendants from the accessibility tree.
 
 	<span class="close" aria-hidden="true">X</span>
 
-## Aria-label
+### Aria-label
 
 Assigns a string that labels an element, use it when <label> is not defined or when it is not visible.  
 example: 
@@ -149,7 +153,7 @@ example:
 
 Placeholder attributes are not a replace for input labels.
 
-## Aria-labelledby
+### Aria-labelledby
 
 Identifies the element that labels the current element if there is not a label available, example:
 
@@ -161,19 +165,19 @@ Indicates the current "checked" state of checkboxes, radio buttons, and other wi
 
 	<span class="custombox" aria-checked="true"></span><input type="checkbox" name="terms" class="hidden">
 
-## Aria-hidden
+### Aria-hidden
 
 Note: anything that has a CSS style of visibility: hidden or display: none or uses the HTML5 hidden attribute will be hidden from assistive technology users.
 
-## Role button
+### Role button
 
 We recommend using `<button>` for any interactive controls but in case you want to use other tag for this you will need to add the role necessary and tabindex , example:
 
 	<span role="button" tabindex="0">Save</span>
 
-# TESTING TOOLS
+## TESTING TOOLS
 
-## Wave
+### Wave
 
 Wave is a free tool from WebAIM that will help you check your site for accessibility problems, this tool generates a variety of reports based on the results of an analyzed web page directly on original web page with embedded icons and indicators that reveal the accessibility of that page.
 
@@ -191,15 +195,15 @@ There are 2 ways to use this tool:
 This tool allow visualisation of the [accessibility tree](http://www.w3.org/WAI/PF/aria-implementation/#intro_treetypes) view of a web page. Chrome canary adds this new *accessibility* tab to the element section of developer tools.
 
 
-## Axe
+### Axe
 
 AXe is an automated accessibility open source testing library and a chrome extension. Test results include a list of accessibility issues, severity, descriptions, and snippets of the code that caused the issue.
 
   
 
-# SCREEN READERS
+## SCREEN READERS
 
-## Chromevox
+### Chromevox
 
 This screen reader uses a relatively simple navigation method based on the exploration of the elements of a web page through various levels of semantic precision. We can navigate a web in a linear way by jumping between blocks, objects, phrases, words or characters of a page.
 
@@ -208,16 +212,16 @@ This screen reader uses a relatively simple navigation method based on the explo
 -   How to use the chromevox extension [video link](https://www.youtube.com/watch?v=NyuuK7tB9fM&index=12&list=PL5aqr5w5fRe7QWzXhqxrilIVduWEmLHM2)
     
 
-## VoiceOver
+### VoiceOver
 
 This is a screen reader integrated on OSX and IOS systems, you can enable this is system preferences > accessibility or you can press Command-F5 to enable VoiceOver.
 
-# FAQ
+## FAQ
 
-## Is mobile also important in accessibility?
+### Is mobile also important in accessibility?
 
 Yes, a  recent [study of 1782 screen reader users](https://webaim.org/projects/screenreadersurvey7/#mobile) in 2017 showed that 88% used screen readers on their mobile devices.
 
-## Audit tools are enough for test accessibility?
+### Audit tools are enough for test accessibility?
 
 No, although these tools are good to detect most of the problems sometimes they can report false positive issues, in the same way they are not good detecting interaction issues like keyboard events
