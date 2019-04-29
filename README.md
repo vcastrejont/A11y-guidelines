@@ -1,8 +1,9 @@
 # Accessibility guidelines
-A practical guide to an accessible web
+A practical guide to an accessible web.
+
+## Document purpose
 This guide is meant to provide team specific information to help you understand the web accessibility standards.
 
-demo: https://vcastrejont.github.io/workshop/hotels.html
 
 ## DOCUMENT
 
